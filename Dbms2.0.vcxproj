@@ -131,12 +131,18 @@
   <ItemGroup>
     <ClCompile Include="bplustree.cpp" />
     <ClCompile Include="BufferManager.cpp" />
+    <ClCompile Include="CatalogManager.cpp" />
     <ClCompile Include="Dbms2.0.cpp" />
+    <ClCompile Include="Executor.cpp" />
     <ClCompile Include="free_space_manager.cpp" />
     <ClCompile Include="index_manager.cpp" />
+    <ClCompile Include="Lexer.cpp" />
     <ClCompile Include="LockManager.cpp" />
+    <ClCompile Include="Parser.cpp" />
+    <ClCompile Include="QueryPlanner.cpp" />
     <ClCompile Include="record_manager.cpp" />
     <ClCompile Include="schema.cpp" />
+    <ClCompile Include="SqlInterface.cpp" />
     <ClCompile Include="table_manager.cpp" />
     <ClCompile Include="TransactionController.cpp" />
     <ClCompile Include="TransactionManager.cpp" />
@@ -144,13 +150,22 @@
     <ClCompile Include="WALManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AST.h" />
+    <ClInclude Include="ASTNodes.h" />
+    <ClInclude Include="ASTVisitor.h" />
     <ClInclude Include="bplustree.h" />
     <ClInclude Include="BufferManager.h" />
+    <ClInclude Include="CatalogManager.h" />
+    <ClInclude Include="Executor.h" />
     <ClInclude Include="free_space_manager.h" />
     <ClInclude Include="index_manager.h" />
+    <ClInclude Include="Lexer.h" />
     <ClInclude Include="LockManager.h" />
+    <ClInclude Include="Parser.h" />
+    <ClInclude Include="QueryPlanner.h" />
     <ClInclude Include="record_manager.h" />
     <ClInclude Include="schema.h" />
+    <ClInclude Include="SqlInterface.h" />
     <ClInclude Include="table_manager.h" />
     <ClInclude Include="TransactionController.h" />
     <ClInclude Include="TransactionManager.h" />

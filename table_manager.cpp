@@ -39,36 +39,31 @@ void TableManager::createTable() {
         return;
     }
 
-    // 1) Create directory
+ 
     fs::create_directories(tablePath);
 
-    // 2) Save schema (creates meta.txt)
     Schema schema(schemaInput, keys);
     schema.saveToFile(tablePath + "/meta.txt");
 
-    // 3) Create empty data table file (data.tbl)
+   
     {
         std::ofstream dataFile(tablePath + "/data.tbl", std::ios::binary);
         dataFile.close();
     }
 
-    // 4) Compute recordSize from schema (sum of field.length)
+ 
     int recordSize = 0;
     for (auto& f : schema.getFields()) {
         recordSize += f.length;
     }
 
-    // 5) Initialize free-space metadata via FreeSpaceManager
-    //    This writes page 0 of "Tables/<tableName>/free_space.meta" through the buffer.
     FreeSpaceManager fsm(tablePath, recordSize, *bufMgr);
     fsm.initialize();
 
-    // 6) Initialize empty indexes via IndexManager
-    //    For each unique key, create an empty "<field>.idx" file.
+
     IndexManager idxMgr(tableName, tablePath, *bufMgr);
     idxMgr.loadIndexes(schema.getUniqueKeys());
-    // No need to call idxMgr.saveIndexes() here because B+ Tree is empty;
-    // however, calling search/insert later will lazily allocate pages in buffer.
+
 
     std::cout << "Table '" << tableName << "' created successfully.\n";
 }

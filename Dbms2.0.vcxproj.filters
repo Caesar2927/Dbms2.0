@@ -22,27 +22,24 @@
     <Filter Include="Source Files\TransactionManager">
       <UniqueIdentifier>{3de3cf20-18ad-4c63-b542-d14b54668a04}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Sql_Parser">
+      <UniqueIdentifier>{868c800d-92b1-48ab-a3b3-3526ce678169}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sorageengine">
+      <UniqueIdentifier>{cd526a9d-02b8-4185-bca3-ee73d5985445}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BufferManager">
+      <UniqueIdentifier>{1da507da-d672-474a-8ba2-ed3b7dd0f5f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TransactionManager">
+      <UniqueIdentifier>{781b7013-c51b-4127-a161-4c0cc6fe7cac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sql_Paarser">
+      <UniqueIdentifier>{7bc6e9e1-d3b0-4c5f-a7be-3fb7f88fa0b3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dbms2.0.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="bplustree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="free_space_manager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="index_manager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="record_manager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="schema.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="table_manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="utils.cpp">
@@ -63,43 +60,106 @@
     <ClCompile Include="TransactionController.cpp">
       <Filter>Source Files\TransactionManager</Filter>
     </ClCompile>
+    <ClCompile Include="bplustree.cpp">
+      <Filter>Source Files\Storageengine</Filter>
+    </ClCompile>
+    <ClCompile Include="free_space_manager.cpp">
+      <Filter>Source Files\Storageengine</Filter>
+    </ClCompile>
+    <ClCompile Include="index_manager.cpp">
+      <Filter>Source Files\Storageengine</Filter>
+    </ClCompile>
+    <ClCompile Include="record_manager.cpp">
+      <Filter>Source Files\Storageengine</Filter>
+    </ClCompile>
+    <ClCompile Include="schema.cpp">
+      <Filter>Source Files\Storageengine</Filter>
+    </ClCompile>
+    <ClCompile Include="table_manager.cpp">
+      <Filter>Source Files\Storageengine</Filter>
+    </ClCompile>
+    <ClCompile Include="CatalogManager.cpp">
+      <Filter>Source Files\Sql_Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="Lexer.cpp">
+      <Filter>Source Files\Sql_Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser.cpp">
+      <Filter>Source Files\Sql_Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryPlanner.cpp">
+      <Filter>Source Files\Sql_Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="Executor.cpp">
+      <Filter>Source Files\Sql_Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="SqlInterface.cpp">
+      <Filter>Source Files\Sql_Parser</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="bplustree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="free_space_manager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="index_manager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="record_manager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="schema.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="table_manager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BufferManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\BufferManager</Filter>
     </ClInclude>
-    <ClInclude Include="TransactionManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="bplustree.h">
+      <Filter>Header Files\Sorageengine</Filter>
     </ClInclude>
-    <ClInclude Include="LockManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="free_space_manager.h">
+      <Filter>Header Files\Sorageengine</Filter>
     </ClInclude>
-    <ClInclude Include="WALManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="index_manager.h">
+      <Filter>Header Files\Sorageengine</Filter>
+    </ClInclude>
+    <ClInclude Include="record_manager.h">
+      <Filter>Header Files\Sorageengine</Filter>
+    </ClInclude>
+    <ClInclude Include="table_manager.h">
+      <Filter>Header Files\Sorageengine</Filter>
+    </ClInclude>
+    <ClInclude Include="schema.h">
+      <Filter>Header Files\Sorageengine</Filter>
     </ClInclude>
     <ClInclude Include="TransactionController.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\TransactionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TransactionManager.h">
+      <Filter>Header Files\TransactionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="WALManager.h">
+      <Filter>Header Files\TransactionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="AST.h">
+      <Filter>Header Files\Sql_Paarser</Filter>
+    </ClInclude>
+    <ClInclude Include="ASTNodes.h">
+      <Filter>Header Files\Sql_Paarser</Filter>
+    </ClInclude>
+    <ClInclude Include="ASTVisitor.h">
+      <Filter>Header Files\Sql_Paarser</Filter>
+    </ClInclude>
+    <ClInclude Include="CatalogManager.h">
+      <Filter>Header Files\Sql_Paarser</Filter>
+    </ClInclude>
+    <ClInclude Include="Executor.h">
+      <Filter>Header Files\Sql_Paarser</Filter>
+    </ClInclude>
+    <ClInclude Include="Lexer.h">
+      <Filter>Header Files\Sql_Paarser</Filter>
+    </ClInclude>
+    <ClInclude Include="LockManager.h">
+      <Filter>Header Files\Sql_Paarser</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser.h">
+      <Filter>Header Files\Sql_Paarser</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryPlanner.h">
+      <Filter>Header Files\Sql_Paarser</Filter>
+    </ClInclude>
+    <ClInclude Include="SqlInterface.h">
+      <Filter>Header Files\Sql_Paarser</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

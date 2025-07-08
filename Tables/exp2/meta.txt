@@ -1,0 +1,2 @@
+int id, string names, int age, int sallery
+id

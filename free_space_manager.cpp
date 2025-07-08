@@ -23,8 +23,7 @@ int FreeSpaceManager::computeRecordsPerPage(int recordSize) {
     return PAGE_SIZE / (recordSize + 1);
 }
 
-/// Initialize “free_space.meta” with exactly one PageMeta at pageId 0,
-/// having freeSlots = recordsPerPage. Then immediately save via buffer.
+
 void FreeSpaceManager::initialize() {
     pages.clear();
     pages.push_back({ 0, static_cast<uint16_t>(recordsPerPage) });
@@ -60,9 +59,7 @@ void FreeSpaceManager::load() {
                 pages.push_back(metaArr[i]);
             }
             else {
-                // If this is the very first entry on page 0, it might legitimately be {0,0};
-                // but that means “no metadata” at all. So we break out only if we've previously
-                // loaded something or this is not page 0.
+   
                 if (pageNum == 0 && pages.empty()) {
                     // No metadata saved yet; just return with pages empty.
                     bufferManager.unpinPage(key.filePath, key.pageNum, PageType::META, false);

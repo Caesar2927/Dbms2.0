@@ -63,7 +63,7 @@ int main() {
             TableManager::deleteTable();
             break;
         case 4:
-            // HERE: invoke your TransactionController
+
             TransactionController::run(
                 bufferManager,
                 lockMgr,
