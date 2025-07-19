@@ -29,6 +29,14 @@ public:
     ///   5) Exit
     static void useTable();
 
+    static void createTable(
+        const std::string& tableName,
+        const std::string& schemaStr,
+        const std::string& keysStr
+		const BufferManager& bufmgr
+    );
+
+
     /// Delete an entire table (remove Tables/<tableName> directory tree)
     static void deleteTable();
 };

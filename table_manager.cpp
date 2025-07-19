@@ -1,4 +1,4 @@
-#include "table_manager.h"
+﻿#include "table_manager.h"
 #include "Schema.h"
 #include "record_manager.h"
 #include "index_manager.h"
@@ -139,4 +139,43 @@ void TableManager::deleteTable() {
 
     fs::remove_all(tablePath);
     std::cout << "Table '" << tableName << "' deleted.\n";
+}
+
+void TableManager::createTable(
+    const std::string& tableName,
+    const std::string& schemaInput,
+    const std::string& keys
+) {
+    if (!bufMgr) {
+        std::cerr << "[createTable] ERROR: BufferManager not set.\n";
+        return;
+    }
+
+    std::string tablePath = "Tables/" + tableName;
+    if (fs::exists(tablePath)) {
+        throw std::runtime_error("Table '" + tableName + "' already exists.");
+    }
+
+    fs::create_directories(tablePath);
+
+    // 1) write meta.txt
+    Schema schema(schemaInput, keys);
+    schema.saveToFile(tablePath + "/meta.txt");
+
+    // 2) create empty data file
+    {
+        std::ofstream dataFile(tablePath + "/data.tbl", std::ios::binary);
+    }
+
+    // 3) initialize free‑space
+    int recordSize = 0;
+    for (auto& f : schema.getFields()) recordSize += f.length;
+    FreeSpaceManager fsm(tablePath, recordSize, *bufMgr);
+    fsm.initialize();
+
+    // 4) initialize indexes (empty)
+    IndexManager idxMgr(tableName, tablePath, *bufMgr);
+    idxMgr.loadIndexes(schema.getUniqueKeys());
+
+    std::cout << "[EXEC] Table '" << tableName << "' created.\n";
 }

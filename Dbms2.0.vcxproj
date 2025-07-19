@@ -141,6 +141,7 @@
     <ClCompile Include="Parser.cpp" />
     <ClCompile Include="QueryPlanner.cpp" />
     <ClCompile Include="record_manager.cpp" />
+    <ClCompile Include="record_manager_sql.cpp" />
     <ClCompile Include="schema.cpp" />
     <ClCompile Include="SqlInterface.cpp" />
     <ClCompile Include="table_manager.cpp" />
@@ -151,7 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AST.h" />
-    <ClInclude Include="ASTNodes.h" />
+    <ClInclude Include="ASTNode.h" />
     <ClInclude Include="ASTVisitor.h" />
     <ClInclude Include="bplustree.h" />
     <ClInclude Include="BufferManager.h" />
@@ -164,6 +165,8 @@
     <ClInclude Include="Parser.h" />
     <ClInclude Include="QueryPlanner.h" />
     <ClInclude Include="record_manager.h" />
+    <ClInclude Include="record_manager_sql.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="schema.h" />
     <ClInclude Include="SqlInterface.h" />
     <ClInclude Include="table_manager.h" />
@@ -171,6 +174,9 @@
     <ClInclude Include="TransactionManager.h" />
     <ClInclude Include="utils.h" />
     <ClInclude Include="WALManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Dbms2.0.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

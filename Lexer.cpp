@@ -1,4 +1,4 @@
-// File: sql/Lexer.cpp
+﻿// File: sql/Lexer.cpp
 #include "Lexer.h"
 #include <cctype>
 #include <unordered_map>
@@ -26,6 +26,10 @@ namespace sql {
         {"RIGHTJOIN", TokenType::RIGHTJOIN},
         {"FULLJOIN", TokenType::FULLJOIN},
         {"OUTERJOIN", TokenType::OUTERJOIN},
+          { "CREATE", TokenType::CREATE },  // ←
+        { "TABLE",  TokenType::TABLE },   // ←
+        { "PRIMARY",TokenType::PRIMARY }, // ←
+        { "KEY",    TokenType::KEY },     // ←
         {"ON", TokenType::ON}
     };
 

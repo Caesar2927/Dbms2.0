@@ -96,6 +96,9 @@
     <ClCompile Include="SqlInterface.cpp">
       <Filter>Source Files\Sql_Parser</Filter>
     </ClCompile>
+    <ClCompile Include="record_manager_sql.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utils.h">
@@ -134,7 +137,7 @@
     <ClInclude Include="AST.h">
       <Filter>Header Files\Sql_Paarser</Filter>
     </ClInclude>
-    <ClInclude Include="ASTNodes.h">
+    <ClInclude Include="ASTNode.h">
       <Filter>Header Files\Sql_Paarser</Filter>
     </ClInclude>
     <ClInclude Include="ASTVisitor.h">
@@ -161,5 +164,16 @@
     <ClInclude Include="SqlInterface.h">
       <Filter>Header Files\Sql_Paarser</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="record_manager_sql.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Dbms2.0.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

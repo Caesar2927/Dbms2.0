@@ -25,6 +25,10 @@ namespace sql {
         OUTERJOIN,
         ON,
         // Identifiers & literals
+        CREATE,    
+        TABLE,     
+        PRIMARY,   
+        KEY,       
         IDENTIFIER,
         NUMERIC_LITERAL,
         STRING_LITERAL,
