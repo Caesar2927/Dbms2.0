@@ -1,0 +1,2 @@
+INT user_id, STRING username
+user_id

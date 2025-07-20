@@ -33,7 +33,7 @@ public:
         const std::string& tableName,
         const std::string& schemaStr,
         const std::string& keysStr
-		const BufferManager& bufmgr
+		
     );
 
 
